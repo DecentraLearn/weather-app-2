@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+
+import WeatherSnapshot from './WeatherSnapshot';
+import LocationSearch from './LocationSearch';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [lon, setLon] = useState(-104.9915);
+  const [lat, setLat] = useState(39.7420);
+  const [located, setLocated] = useState(false);
+
+  const setLocationCallback = (lon, lat) => {
+    setLon(lon);
+    setLat(lat);
+    setLocated(true);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='app'>
+      <div id='align'>
+        <LocationSearch callBack={setLocationCallback}/>
+        <div id='snapshot'>
+          <WeatherSnapshot lon={lon} lat={lat}/>
+        </div>
+      </div>
     </div>
   );
 }
+
 
 export default App;

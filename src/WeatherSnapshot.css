@@ -1,0 +1,50 @@
+#snapshot-border {
+  border: var(--fourth-color) solid 2px;
+  border-radius: 5px;
+}
+#header {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+#dateTimeClock {
+  padding-left: 30px;
+  text-align: right;
+  font-size: 0.75rem;
+}
+#date {
+  font-size: 0.85rem;
+}
+#time {
+  color: var(--secondary-color);
+}
+#city {
+  font-size: 1.7rem;
+}
+#temp {
+  color: var(--fourth-color);
+  font-size: 4rem;
+}
+#body {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#icon-background {
+  height: 75px;
+  width: 75px;
+  background-color: var(--fourth-color);
+  border-radius: 45px;
+}
+#icon {
+  height: 75px;
+  width: 75px;
+}
+#description {
+  font-size: 0.85rem;
+  text-align: center;
+  padding-bottom: 15px;
+}
