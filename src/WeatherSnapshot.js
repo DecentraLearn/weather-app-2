@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import DateTimeClock from "./DateTimeClock";
-import snow from "./snow.png";
 import './WeatherSnapshot.css';
 
 function kelvinToFarenheit(kelv) {
@@ -28,7 +27,7 @@ function WeatherSnapshot(props) {
         })
     }, [lon, lat]);
 
-    if(data) {
+    if(loaded) {
         temp = kelvinToFarenheit(data.main.temp).toFixed(0);
         city = data.name;
         description = data.weather[0].description;

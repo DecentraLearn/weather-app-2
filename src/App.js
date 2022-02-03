@@ -1,6 +1,7 @@
 
 import WeatherSnapshot from './WeatherSnapshot';
 import LocationSearch from './LocationSearch';
+import SevenDayForecast from './SevenDayForecast';
 import './App.css';
 import { useState } from 'react';
 
@@ -22,10 +23,12 @@ function App() {
         <div id='snapshot'>
           <WeatherSnapshot lon={lon} lat={lat}/>
         </div>
+        <div id='forecast'>
+          <SevenDayForecast lon={lon} lat={lat}/>
+        </div>
       </div>
     </div>
   );
 }
-
 
 export default App;

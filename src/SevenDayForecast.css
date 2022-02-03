@@ -1,0 +1,37 @@
+#seven-day-forecast {
+  display: flex;
+  font-size: 0.6rem;
+  text-align: center;
+  justify-content: space-between;
+  border: var(--fourth-color) solid 2px;
+  border-radius: 5px;
+  padding: 5px;
+  gap: 5px;
+}
+.forecast-day {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap: 2px;
+}
+.line {
+  border-right: var(--main-color) solid 1px;
+}
+.forecast-dayOfTheWeek {
+  color: var(--main-color);
+  font-style: italic;
+}
+.forecast-high {
+  color: var(--fourth-color);
+}
+.forecast-low {
+  color: var(--fourth-color);
+}
+.forecast-description {
+  color: var(--secondary-color);
+}
+.label {
+  display: flex;
+  gap: 2px;
+}
